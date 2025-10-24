@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "name": "supreme-v4-quantum-ai",
+  "builds": [
+    {
+      "src": "frontend/quantum_dashboard.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/frontend/quantum_dashboard.html"
+    },
+    {
+      "src": "/dashboard",
+      "dest": "/frontend/quantum_dashboard.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ]
+}

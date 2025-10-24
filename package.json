@@ -1,0 +1,28 @@
+{
+  "name": "supreme-v4-quantum-ai",
+  "version": "1.0.0",
+  "description": "Supreme V4 Quantum AI Trading Protocol - ETHOnline 2025",
+  "main": "frontend/quantum_dashboard.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'No build step required'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "quantum",
+    "defi",
+    "uniswap",
+    "v4",
+    "ai",
+    "trading",
+    "ethereum",
+    "ethonline"
+  ],
+  "author": "Supreme V4 Quantum AI Protocol",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/supreme-chain/supreme-v4-quantum-ai"
+  },
+  "homepage": "https://supreme-v4-quantum-ai.vercel.app"
+}

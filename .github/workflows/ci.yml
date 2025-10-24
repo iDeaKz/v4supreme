@@ -1,0 +1,35 @@
+name: ETHOnline 2025 - Supreme V4 Quantum AI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        cd quantum_engine
+        pip install -r requirements.txt
+    
+    - name: Test quantum engine
+      run: |
+        cd quantum_engine
+        python test_quantum.py
+    
+    - name: Deploy to Vercel
+      if: github.ref == 'refs/heads/main'
+      run: |
+        npm install -g vercel
+        vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
