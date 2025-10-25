@@ -29,7 +29,7 @@ pandas>=2.0.0,<3.0.0  # Optional: for data analysis
 
 # Cryptography
 pycryptodome>=3.18.0,<4.0.0
-cryptography>=42.0.4,<43.0.0
+cryptography>=43.0.1,<44.0.0 
 
 # Utilities
 python-dotenv>=1.0.0,<2.0.0  # Environment variables
